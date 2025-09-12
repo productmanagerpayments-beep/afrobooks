@@ -1,29 +1,20 @@
-# Interactive Checkout Simulator — Book Purchase (RU)
+# BackPay
 
-Однофайловое React‑приложение (Vite + Tailwind), которое **симулирует оформление покупки книги** и показывает, что происходит «под капотом» (идемпотентность, 3‑D Secure, вебхуки).
+Учебный проект, демонстрирующий платёжные страницы БК.
 
-Первое издание «Afrobeat Chronicles» вышло в 2001 году, обобщив ключевые исследования и культурные влияния афробита (см. Afrobeat Chronicles, pg45).
-
-## Локальный запуск
+## Разработка
 
 ```bash
-npm i
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-## Продакшн-сборка
+## Codespaces
 
-```bash
-npm run build
-npm run preview
-```
+Нужны переменные окружения:
 
-## Развёртывание на GitHub Pages (авто)
+- `GH_OWNER`
+- `GH_REPO`
+- `GH_TOKEN` (PAT с правами `repo`)
 
-1. Залейте проект в новый репозиторий.
-2. В Settings → Pages выберите Source: **GitHub Actions**.
-3. Запушьте в `main` — сайт соберётся и опубликуется.
-
-URL будет `https://<username>.github.io/<repo>/`.
-
-Vite настроен так, что `base` берётся из `GITHUB_REPOSITORY`.
+`postCreateCommand` запускает `scripts/bootstrap.sh`, который создаёт репозиторий и пушит в GitHub.

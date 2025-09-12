@@ -1,0 +1,35 @@
+
+> web@0.1.0 build /workspace/afrobooks/apps/web
+> next build
+
+ ⚠ Invalid next.config.js options detected: 
+ ⚠     Unrecognized key(s) in object: 'appDir' at "experimental"
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+   ▲ Next.js 14.1.0
+
+   Creating an optimized production build ...
+
+> Build error occurred
+Error: 
+
+Could not locate i18n config. Create one at `./(src/)i18n.{js,jsx,ts,tsx}` or specify a custom location:
+
+const withNextIntl = require('next-intl/plugin')(
+  './path/to/i18n.tsx'
+);
+
+module.exports = withNextIntl({
+  // Other Next.js configuration ...
+});
+
+    at i (/workspace/afrobooks/node_modules/.pnpm/next-intl@3.2.1_next@14.1.0_react@18.2.0/node_modules/next-intl/dist/production/plugin.js:1:533)
+    at Object.webpack (/workspace/afrobooks/node_modules/.pnpm/next-intl@3.2.1_next@14.1.0_react@18.2.0/node_modules/next-intl/dist/production/plugin.js:1:1928)
+    at getBaseWebpackConfig (/workspace/afrobooks/node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack-config.js:1775:32)
+    at async Promise.all (index 1)
+    at async Span.traceAsyncFn (/workspace/afrobooks/node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/trace/trace.js:151:20)
+    at async webpackBuildImpl (/workspace/afrobooks/node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack-build/impl.js:133:21)
+    at async /workspace/afrobooks/node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/index.js:828:115
+    at async Span.traceAsyncFn (/workspace/afrobooks/node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/trace/trace.js:151:20)
+    at async build (/workspace/afrobooks/node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/index.js:374:9)
+    at async main (/workspace/afrobooks/node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/bin/next:155:5)
+ ELIFECYCLE  Command failed with exit code 1.
