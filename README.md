@@ -1,27 +1,20 @@
-# Interactive Checkout Simulator — Book Purchase (RU)
+# BackPay
 
-Однофайловое React‑приложение (Vite + Tailwind), которое **симулирует оформление покупки книги** и показывает, что происходит «под капотом» (идемпотентность, 3‑D Secure, вебхуки).
+Учебный проект, демонстрирующий платёжные страницы БК.
 
-## Локальный запуск
-
-```bash
-npm i
-npm run dev
-```
-
-## Продакшн-сборка
+## Разработка
 
 ```bash
-npm run build
-npm run preview
+pnpm install
+pnpm dev
 ```
 
-## Развёртывание на GitHub Pages (авто)
+## Codespaces
 
-1. Залейте проект в новый репозиторий.
-2. В Settings → Pages выберите Source: **GitHub Actions**.
-3. Запушьте в `main` — сайт соберётся и опубликуется.
+Нужны переменные окружения:
 
-URL будет `https://<username>.github.io/<repo>/`.
+- `GH_OWNER`
+- `GH_REPO`
+- `GH_TOKEN` (PAT с правами `repo`)
 
-Vite настроен так, что `base` берётся из `GITHUB_REPOSITORY`.
+`postCreateCommand` запускает `scripts/bootstrap.sh`, который создаёт репозиторий и пушит в GitHub.
